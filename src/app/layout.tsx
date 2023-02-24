@@ -10,7 +10,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  // const store = makeStore();
   return (
     <html lang="en">
       <body>

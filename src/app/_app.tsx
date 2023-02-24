@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import persistReducer from 'redux-persist/lib/persistReducer';
 import storage from 'redux-persist/lib/storage'
 import { AppProps } from "next/app";
+import { Suspense } from 'react';
 
 const initialState: string[] = [];
 
@@ -28,7 +29,9 @@ const MainStore = configureStore({
 const App = ({ Component, pageProps }: AppProps) => {
     return ( 
         <Provider store={MainStore}>
-            <Component {...pageProps} />
+            <Suspense fallback={<div>Loading...</div>}>
+                <Component {...pageProps} />
+            </Suspense>
         </Provider>
      );
 }
