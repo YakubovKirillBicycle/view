@@ -18,7 +18,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div>
+    <div className='bg-gray-700 overflow-hidden'>
       <NavBar />
       <Hero />
       <About />
