@@ -3,7 +3,7 @@
 export const Explore = () => {
   return ( 
     <section>
-      About section
+      Explore section
     </section>
    );
 }
